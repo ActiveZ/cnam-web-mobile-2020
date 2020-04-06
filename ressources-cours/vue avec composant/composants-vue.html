@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	
+	
+	<title>Test composants</title>
+	<style>
+		.message {
+			color:red;
+		}
+	</style>
+</head>
+<body >
+	<div id="main">
+		<message>Mon premier message</message>
+		<message>Mon second message</message>
+	</div>
+</body>
+<script type="text/javascript">
+	
+	// Définition d'un nouveau composant appelé `button-counter`
+	Vue.component('message', {
+	  data: function () {
+	    return {
+	      
+	    }
+	  },
+	  template: '<div class="message"><slot></slot></div>'
+	})
+
+	var demo = new Vue({
+	
+    el: '#main',
+    
+    data: {
+    	
+    }
+	
+
+	});
+
+</script>
+</html>
